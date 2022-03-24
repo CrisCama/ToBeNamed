@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public float rotationSpeed = 5.0f;
+    public float rotationSpeed = 140.0f;
     public float rotationY;
     public float rotationX;
 
@@ -15,7 +15,7 @@ public class FollowPlayer : MonoBehaviour
     private Vector3 currentRotation;
     private Vector3 smoothVelocity = Vector3.zero;
 
-    [SerializeField] float smoothTime = 3.0f;
+    [SerializeField] float smoothTime = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class FollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -36,7 +36,6 @@ public class FollowPlayer : MonoBehaviour
 
         Vector3 nextRotation = new Vector3(rotationX, rotationY);
         currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
-
 
         transform.localEulerAngles = currentRotation;
         transform.position = target.position - transform.forward * offset;
