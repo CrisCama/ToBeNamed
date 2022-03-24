@@ -30,8 +30,14 @@ public class Map : MonoBehaviour
                 }
                 GameObject hex = (GameObject)Instantiate(hexPrefab, new Vector3(xPos, 0, y * zOffset), Quaternion.identity);
 
+                // Name GameObject
                 hex.name = "hex_" + x + "_" + y;
 
+                // Make sure hex is aware of place on map
+                hex.GetComponent<Hex>().x = x;
+                hex.GetComponent<Hex>().y = y;
+
+                // Cleaner Hierachy
                 hex.transform.SetParent(this.transform);
 
                 hex.isStatic = true;
