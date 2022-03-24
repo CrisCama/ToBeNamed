@@ -9,11 +9,11 @@ public class Map : MonoBehaviour
     // Size of map in terms of # of hextiles
     // Not representative of the amount of world space we will take up
     // our tiles may be more or less than 1 Unity world unit
-    int width = 20;
-    int height = 20;
+    int width = 10;
+    int height = 10;
 
-    public float xOffset = 0.882f;
-    public float zOffset = 0.764f;
+    float xOffset = 0.882f;
+    float zOffset = 0.764f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,14 @@ public class Map : MonoBehaviour
                 {
                     xPos += xOffset/2;
                 }
-                Instantiate(hexPrefab, new Vector3(xPos, 0, y * zOffset), Quaternion.identity);
+                GameObject hex = (GameObject)Instantiate(hexPrefab, new Vector3(xPos, 0, y * zOffset), Quaternion.identity);
+
+                hex.name = "hex_" + x + "_" + y;
+
+                hex.transform.SetParent(this.transform);
+
+                hex.isStatic = true;
+
             }
         }
     }

@@ -216,6 +216,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &396631824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396631826}
+  - component: {fileID: 396631825}
+  m_Layer: 0
+  m_Name: Mouse Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &396631825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396631824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96a17d609e077647bad165ed37bafba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &396631826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396631824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.6519656, y: -2.17233, z: 0.6726713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633872409
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,13 +335,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633872409}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10.98, z: -0.26}
+  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalPosition: {x: 4, y: 4, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
 --- !u!1 &1215081440
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,9 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee1cd625f865de479dd0c587f376e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hexPrefab: {fileID: 3879341401434442547, guid: e726686f2c566b54db852d4cb4c90cf3, type: 3}
-  xOffset: 0.886
-  zOffset: 0.764
+  hexPrefab: {fileID: 661688662330720004, guid: e726686f2c566b54db852d4cb4c90cf3, type: 3}
 --- !u!4 &1215081442
 Transform:
   m_ObjectHideFlags: 0
