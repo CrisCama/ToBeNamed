@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class MouseManager : MonoBehaviour
 {
+    Unit selectedUnit;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +27,14 @@ public class MouseManager : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             GameObject hitObject = hit.collider.transform.parent.gameObject;
-            Debug.Log("MouseOver" + hitObject.name);
+            //Debug.Log("MouseOver" + hitObject.name);
             if(hitObject.GetComponent<Hex>() != null)
             {
                 MouseOverHex(hitObject);
+            }
+            else if (hitObject.GetComponent<Unit>() != null)
+            {
+                MouseOverUnit(hitObject);
             }
         }
     }
@@ -40,6 +45,7 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             MeshRenderer mr = hitObject.GetComponentInChildren<MeshRenderer>();
+
             if (mr.material.color == Color.green)
             {
                 mr.material.color = Color.white;
@@ -48,6 +54,19 @@ public class MouseManager : MonoBehaviour
             {
                 mr.material.color = Color.green;
             }
+
+            if (selectedUnit != null)
+            {
+                selectedUnit.destination = hitObject.transform.position;
+            }
+        }
+    }
+    void MouseOverUnit(GameObject hitObject)
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            selectedUnit = hitObject.GetComponent<Unit>();
+            Debug.Log(selectedUnit.name + "Selected");
         }
     }
 }
