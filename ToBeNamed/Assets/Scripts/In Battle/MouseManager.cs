@@ -32,7 +32,7 @@ public class MouseManager : MonoBehaviour
             {
                 MouseOverHex(hitObject);
             }
-            else if (hitObject.GetComponent<Unit>() != null)
+            else if (hitObject.GetComponent<Unit>() != null) //moves unit directly, look up pilemap tutorial for pathfinding on quil18creates
             {
                 MouseOverUnit(hitObject);
             }

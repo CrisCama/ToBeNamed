@@ -858,6 +858,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexPrefab: {fileID: 661688662330720004, guid: e726686f2c566b54db852d4cb4c90cf3, type: 3}
+  width: 10
+  height: 10
 --- !u!4 &1215081442
 Transform:
   m_ObjectHideFlags: 0
